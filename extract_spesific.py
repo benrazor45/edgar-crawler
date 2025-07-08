@@ -53,7 +53,7 @@ def process_json_files(json_folder, output_folder, cik_to_ticker):
                 with open(file_path, 'r', encoding='utf-8') as f_in:
                     data = json.load(f_in)
                     
-                content = data.get('part_1_item_2', 'Konten untuk "part_1_item_2" tidak ditemukan.')
+                content = data.get('part_2_item_1A', 'Konten untuk "part_1_item_2" tidak ditemukan.')
                 
                 with open(output_path, 'w', encoding='utf-8') as f_out:
                     f_out.write(content)
@@ -65,10 +65,10 @@ def process_json_files(json_folder, output_folder, cik_to_ticker):
 
 CIK_LIST_FILE = 'cik_list.json'
 
-JSON_SOURCE_FOLDER = '/Users/jezzen145/Downloads/10Q-Analyzer2/datasets/EXTRACTED_FILINGS/10-Q' 
+JSON_SOURCE_FOLDER = 'D:/10Q-Analyzer/datasets/EXTRACTED_FILINGS_10Q/10-Q' 
 
 # Folder untuk menyimpan hasil file .txt
-TXT_OUTPUT_FOLDER = '/Users/jezzen145/Downloads/10Q-Analyzer2/datasets/EXTRACTED_FILLINGS_TXT'
+TXT_OUTPUT_FOLDER = 'D:/10Q-Analyzer/datasets/EXTRACTED_FILLINGS_10Q(RF)_TXT'
 
 try:
     cik_ticker_map = create_cik_ticker_map(CIK_LIST_FILE)
