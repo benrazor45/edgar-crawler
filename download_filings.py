@@ -27,12 +27,12 @@ from urllib3.util import Retry
 from logger import Logger
 
 # Python version compatibility for HTML parser
-try:
-    from html.parser.HTMLParser import HTMLParseError
-except ImportError:  # Python 3.5+
+# try:
+#     from html.parser.HTMLParser import HTMLParseError
+# except ImportError:  # Python 3.5+
 
-    class HTMLParseError(Exception):
-        pass
+#     class HTMLParseError(Exception):
+#         pass
 
 
 # Import constants from the project's __init__ file
